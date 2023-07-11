@@ -1,0 +1,1127 @@
+name: Заказчик
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/customer
+    metadata:
+      groupName: Заказчик
+      groupDescription: ''
+      subgroup: Дашборд
+      subgroupDescription: ''
+      title: 'Стартовый экран заказчика'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/customer/settings
+    metadata:
+      groupName: Заказчик
+      groupDescription: ''
+      subgroup: Настройки
+      subgroupDescription: ''
+      title: 'Заполнение информации о заказчике.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: quis
+        type: string
+        custom: []
+      last_name:
+        name: last_name
+        description: ''
+        required: true
+        example: iste
+        type: string
+        custom: []
+      middle_name:
+        name: middle_name
+        description: ''
+        required: true
+        example: iste
+        type: string
+        custom: []
+      region:
+        name: region
+        description: ''
+        required: true
+        example: occaecati
+        type: string
+        custom: []
+      city:
+        name: city
+        description: ''
+        required: true
+        example: quo
+        type: string
+        custom: []
+      street:
+        name: street
+        description: ''
+        required: true
+        example: iure
+        type: string
+        custom: []
+      house:
+        name: house
+        description: ''
+        required: true
+        example: perferendis
+        type: string
+        custom: []
+      flat:
+        name: flat
+        description: ''
+        required: true
+        example: maiores
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: quis
+      last_name: iste
+      middle_name: iste
+      region: occaecati
+      city: quo
+      street: iure
+      house: perferendis
+      flat: maiores
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/customer/settings/{id}'
+    metadata:
+      groupName: Заказчик
+      groupDescription: ''
+      subgroup: Настройки
+      subgroupDescription: ''
+      title: 'Информация о заказчике.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the setting.'
+        required: true
+        example: 6
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 6
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/v1/customer/settings/{id}'
+    metadata:
+      groupName: Заказчик
+      groupDescription: ''
+      subgroup: Настройки
+      subgroupDescription: ''
+      title: 'Обновление информации о заказчике.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the setting.'
+        required: true
+        example: 17
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 17
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: vel
+        type: string
+        custom: []
+      last_name:
+        name: last_name
+        description: ''
+        required: true
+        example: sit
+        type: string
+        custom: []
+      middle_name:
+        name: middle_name
+        description: ''
+        required: true
+        example: voluptatem
+        type: string
+        custom: []
+      region:
+        name: region
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
+      city:
+        name: city
+        description: ''
+        required: true
+        example: vero
+        type: string
+        custom: []
+      street:
+        name: street
+        description: ''
+        required: true
+        example: impedit
+        type: string
+        custom: []
+      house:
+        name: house
+        description: ''
+        required: true
+        example: quod
+        type: string
+        custom: []
+      flat:
+        name: flat
+        description: ''
+        required: true
+        example: odio
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: vel
+      last_name: sit
+      middle_name: voluptatem
+      region: et
+      city: vero
+      street: impedit
+      house: quod
+      flat: odio
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/customer/products
+    metadata:
+      groupName: Заказчик
+      groupDescription: ''
+      subgroup: Товары
+      subgroupDescription: ''
+      title: 'Список товаров с фильтром по категориям.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/customer/products/{id}'
+    metadata:
+      groupName: Заказчик
+      groupDescription: ''
+      subgroup: Товары
+      subgroupDescription: ''
+      title: 'Информация о товаре.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the product.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/customer/partners
+    metadata:
+      groupName: Заказчик
+      groupDescription: ''
+      subgroup: Контрагенты
+      subgroupDescription: ''
+      title: 'Список контрагентов.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/customer/partners
+    metadata:
+      groupName: Заказчик
+      groupDescription: ''
+      subgroup: Контрагенты
+      subgroupDescription: ''
+      title: 'Создание нового контрагента.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
+      last_name:
+        name: last_name
+        description: ''
+        required: true
+        example: omnis
+        type: string
+        custom: []
+      middle_name:
+        name: middle_name
+        description: ''
+        required: true
+        example: commodi
+        type: string
+        custom: []
+      email:
+        name: email
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
+      phone:
+        name: phone
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        custom: []
+      region:
+        name: region
+        description: ''
+        required: true
+        example: quisquam
+        type: string
+        custom: []
+      city:
+        name: city
+        description: ''
+        required: true
+        example: unde
+        type: string
+        custom: []
+      street:
+        name: street
+        description: ''
+        required: true
+        example: rerum
+        type: string
+        custom: []
+      house:
+        name: house
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
+      flat:
+        name: flat
+        description: ''
+        required: true
+        example: deleniti
+        type: string
+        custom: []
+      entrance:
+        name: entrance
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
+      intercom:
+        name: intercom
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: et
+      last_name: omnis
+      middle_name: commodi
+      phone: consequatur
+      region: quisquam
+      city: unde
+      street: rerum
+      house: et
+      flat: deleniti
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/customer/partners/{id}'
+    metadata:
+      groupName: Заказчик
+      groupDescription: ''
+      subgroup: Контрагенты
+      subgroupDescription: ''
+      title: 'Информация о контрагенте.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the partner.'
+        required: true
+        example: 6
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 6
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/v1/customer/partners/{id}'
+    metadata:
+      groupName: Заказчик
+      groupDescription: ''
+      subgroup: Контрагенты
+      subgroupDescription: ''
+      title: 'Обновление информации о контрагенте.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the partner.'
+        required: true
+        example: 8
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 8
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: doloremque
+        type: string
+        custom: []
+      last_name:
+        name: last_name
+        description: ''
+        required: true
+        example: sint
+        type: string
+        custom: []
+      middle_name:
+        name: middle_name
+        description: ''
+        required: true
+        example: impedit
+        type: string
+        custom: []
+      email:
+        name: email
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
+      phone:
+        name: phone
+        description: ''
+        required: true
+        example: tempore
+        type: string
+        custom: []
+      region:
+        name: region
+        description: ''
+        required: true
+        example: aperiam
+        type: string
+        custom: []
+      city:
+        name: city
+        description: ''
+        required: true
+        example: quaerat
+        type: string
+        custom: []
+      street:
+        name: street
+        description: ''
+        required: true
+        example: nesciunt
+        type: string
+        custom: []
+      house:
+        name: house
+        description: ''
+        required: true
+        example: dolore
+        type: string
+        custom: []
+      flat:
+        name: flat
+        description: ''
+        required: true
+        example: quas
+        type: string
+        custom: []
+      entrance:
+        name: entrance
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
+      intercom:
+        name: intercom
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
+    cleanBodyParameters:
+      name: doloremque
+      last_name: sint
+      middle_name: impedit
+      phone: tempore
+      region: aperiam
+      city: quaerat
+      street: nesciunt
+      house: dolore
+      flat: quas
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/customer/partners/{id}'
+    metadata:
+      groupName: Заказчик
+      groupDescription: ''
+      subgroup: Контрагенты
+      subgroupDescription: ''
+      title: 'Удаление контрагента.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the partner.'
+        required: true
+        example: 20
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 20
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/customer/orders
+    metadata:
+      groupName: Заказчик
+      groupDescription: ''
+      subgroup: Заказы
+      subgroupDescription: ''
+      title: 'Список заказов с фильтром.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/customer/orders
+    metadata:
+      groupName: Заказчик
+      groupDescription: ''
+      subgroup: Заказы
+      subgroupDescription: ''
+      title: 'Создание заказа.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      product_id:
+        name: product_id
+        description: ''
+        required: true
+        example: tempora
+        type: string
+        custom: []
+      rate_id:
+        name: rate_id
+        description: ''
+        required: true
+        example: sunt
+        type: string
+        custom: []
+      desired_pick_up_date:
+        name: desired_pick_up_date
+        description: ''
+        required: true
+        example: totam
+        type: string
+        custom: []
+      desired_delivery_date:
+        name: desired_delivery_date
+        description: ''
+        required: true
+        example: quaerat
+        type: string
+        custom: []
+      text:
+        name: text
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
+      sender_id:
+        name: sender_id
+        description: ''
+        required: true
+        example: id
+        type: string
+        custom: []
+      sender_type:
+        name: sender_type
+        description: ''
+        required: true
+        example: eum
+        type: string
+        custom: []
+      receiver_id:
+        name: receiver_id
+        description: ''
+        required: true
+        example: cum
+        type: string
+        custom: []
+      receiver_type:
+        name: receiver_type
+        description: ''
+        required: true
+        example: dolorem
+        type: string
+        custom: []
+      door_to_door:
+        name: door_to_door
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
+    cleanBodyParameters:
+      product_id: tempora
+      rate_id: sunt
+      desired_pick_up_date: totam
+      desired_delivery_date: quaerat
+      sender_id: id
+      sender_type: eum
+      receiver_id: cum
+      receiver_type: dolorem
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/customer/orders/{id}'
+    metadata:
+      groupName: Заказчик
+      groupDescription: ''
+      subgroup: Заказы
+      subgroupDescription: ''
+      title: 'Информация о заказе.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the order.'
+        required: true
+        example: 10
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 10
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/v1/customer/orders/{id}'
+    metadata:
+      groupName: Заказчик
+      groupDescription: ''
+      subgroup: Заказы
+      subgroupDescription: ''
+      title: 'Обновление информации о заказе.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the order.'
+        required: true
+        example: 15
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      id: 15
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      desired_pick_up_date:
+        name: desired_pick_up_date
+        description: ''
+        required: true
+        example: commodi
+        type: string
+        custom: []
+      desired_delivery_date:
+        name: desired_delivery_date
+        description: ''
+        required: true
+        example: praesentium
+        type: string
+        custom: []
+      sender_id:
+        name: sender_id
+        description: ''
+        required: true
+        example: odit
+        type: string
+        custom: []
+      sender_type:
+        name: sender_type
+        description: ''
+        required: true
+        example: soluta
+        type: string
+        custom: []
+      receiver_id:
+        name: receiver_id
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
+      receiver_type:
+        name: receiver_type
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
+      text:
+        name: text
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
+    cleanBodyParameters:
+      desired_pick_up_date: commodi
+      desired_delivery_date: praesentium
+      sender_id: odit
+      sender_type: soluta
+      receiver_id: et
+      receiver_type: et
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/v1/customer/orders/{order_id}/tips'
+    metadata:
+      groupName: Заказчик
+      groupDescription: ''
+      subgroup: Заказы
+      subgroupDescription: ''
+      title: Чаевые.
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      order_id:
+        name: order_id
+        description: 'The ID of the order.'
+        required: true
+        example: 20
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      order_id: 20
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      amount:
+        name: amount
+        description: ''
+        required: true
+        example: facilis
+        type: string
+        custom: []
+    cleanBodyParameters:
+      amount: facilis
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/customer/recharge-balance
+    metadata:
+      groupName: Заказчик
+      groupDescription: ''
+      subgroup: Финансы
+      subgroupDescription: ''
+      title: 'Пополнение баланса.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      amount:
+        name: amount
+        description: ''
+        required: true
+        example: autem
+        type: string
+        custom: []
+    cleanBodyParameters:
+      amount: autem
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/v1/customer/orders/{order_id}/rate'
+    metadata:
+      groupName: Заказчик
+      groupDescription: ''
+      subgroup: Заказы
+      subgroupDescription: ''
+      title: 'Оценка доставки.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      order_id:
+        name: order_id
+        description: 'The ID of the order.'
+        required: true
+        example: 1
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      order_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/v1/customer/orders/{order_id}/cancel'
+    metadata:
+      groupName: Заказчик
+      groupDescription: ''
+      subgroup: Заказы
+      subgroupDescription: ''
+      title: 'Отмена заказа.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      order_id:
+        name: order_id
+        description: 'The ID of the order.'
+        required: true
+        example: 20
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      order_id: 20
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

@@ -1,0 +1,1634 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://92.51.39.155'
+paths:
+  /api/v1/qrcode:
+    get:
+      summary: 'Генерация qr кода.'
+      operationId: Qr
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/v1/admin/orders:
+    get:
+      summary: 'Вывод всех заказов.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      security: []
+  '/api/v1/admin/orders/{id}':
+    get:
+      summary: 'Вывод одного заказа.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      security: []
+    put:
+      summary: 'Обновление данных заказа.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                products:
+                  type: object
+                  description: ''
+                  example: []
+                  properties: []
+                address_from:
+                  type: string
+                  description: ''
+                  example: exercitationem
+                address_to:
+                  type: string
+                  description: ''
+                  example: qui
+                desired_pick_up_date:
+                  type: string
+                  description: ''
+                  example: quae
+                desired_delivery_date:
+                  type: string
+                  description: ''
+                  example: adipisci
+                text:
+                  type: string
+                  description: ''
+                  example: null
+              required:
+                - products
+                - address_from
+                - address_to
+                - desired_pick_up_date
+                - desired_delivery_date
+      security: []
+    delete:
+      summary: 'Удаление заказа.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the order.'
+        example: 6
+        required: true
+        schema:
+          type: integer
+  '/api/v1/admin/orders/{order_id}/accepted':
+    put:
+      summary: 'Одобрение заказа.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      security: []
+    parameters:
+      -
+        in: path
+        name: order_id
+        description: 'The ID of the order.'
+        example: 2
+        required: true
+        schema:
+          type: integer
+  /api/v1/admin/products:
+    get:
+      summary: 'Список заказов.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      security: []
+    post:
+      summary: 'Создание товара.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: voluptatem
+                price:
+                  type: string
+                  description: ''
+                  example: ullam
+                category_id:
+                  type: string
+                  description: ''
+                  example: dolorem
+              required:
+                - name
+                - price
+                - category_id
+      security: []
+  '/api/v1/admin/products/{id}':
+    get:
+      summary: 'Информация о товаре.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      security: []
+    put:
+      summary: 'Обновление данных товара.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: quaerat
+                price:
+                  type: string
+                  description: ''
+                  example: ad
+                category_id:
+                  type: string
+                  description: ''
+                  example: mollitia
+              required:
+                - name
+                - price
+                - category_id
+      security: []
+    delete:
+      summary: 'Уделание товара.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the product.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/v1/admin/categories:
+    get:
+      summary: 'Список категорий.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      security: []
+    post:
+      summary: 'Создание категории.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      security: []
+  '/api/v1/admin/categories/{id}':
+    get:
+      summary: 'Инфомация о категории.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      security: []
+    put:
+      summary: 'Обновление информации о категории.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      security: []
+    delete:
+      summary: 'Удаление категории.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the category.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/v1/admin/couriers:
+    get:
+      summary: 'Список курьеров.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      security: []
+  '/api/v1/admin/couriers/{id}':
+    get:
+      summary: 'Информация о курьере.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      security: []
+    put:
+      summary: 'Обновление данных курьера.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: aspernatur
+                last_name:
+                  type: string
+                  description: ''
+                  example: qui
+                middle_name:
+                  type: string
+                  description: ''
+                  example: possimus
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: dhodkiewicz@example.org
+                phone:
+                  type: string
+                  description: ''
+                  example: omnis
+                active:
+                  type: string
+                  description: ''
+                  example: null
+                passport_series:
+                  type: string
+                  description: ''
+                  example: in
+                passport_number:
+                  type: string
+                  description: ''
+                  example: ut
+                passport_issued_date:
+                  type: string
+                  description: ''
+                  example: voluptatem
+                passport_issued_by:
+                  type: string
+                  description: ''
+                  example: vel
+              required:
+                - name
+                - last_name
+                - middle_name
+                - email
+                - phone
+                - passport_series
+                - passport_number
+                - passport_issued_date
+                - passport_issued_by
+      security: []
+    delete:
+      summary: 'Удаление курьера.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the courier.'
+        example: 8
+        required: true
+        schema:
+          type: integer
+  /api/v1/admin/customers:
+    get:
+      summary: 'Список заказчиков.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      security: []
+  '/api/v1/admin/customers/{id}':
+    get:
+      summary: 'Информация о заказчике.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      security: []
+    put:
+      summary: 'Обновление информации о заказчике.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: voluptatibus
+                last_name:
+                  type: string
+                  description: ''
+                  example: aperiam
+                middle_name:
+                  type: string
+                  description: ''
+                  example: consequatur
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: pamela95@example.com
+                phone:
+                  type: string
+                  description: ''
+                  example: consequatur
+                active:
+                  type: string
+                  description: ''
+                  example: null
+              required:
+                - name
+                - last_name
+                - middle_name
+                - email
+                - phone
+      security: []
+    delete:
+      summary: 'Удаление заказчика.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the customer.'
+        example: 4
+        required: true
+        schema:
+          type: integer
+  '/api/v1/admin/customers/{user_id}/ambassador':
+    put:
+      summary: 'Добавление роли амбассадора.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+                  description: ''
+                  example: et
+              required:
+                - text
+      security: []
+    parameters:
+      -
+        in: path
+        name: user_id
+        description: 'The ID of the user.'
+        example: 16
+        required: true
+        schema:
+          type: integer
+  '/api/v1/admin/customers/{user_id}/ambassador/remove':
+    put:
+      summary: 'Удаление роди амбассадор.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Админ
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+                  description: ''
+                  example: dolores
+              required:
+                - text
+      security: []
+    parameters:
+      -
+        in: path
+        name: user_id
+        description: 'The ID of the user.'
+        example: 17
+        required: true
+        schema:
+          type: integer
+  /api/v1/auth/confirm:
+    post:
+      summary: 'Подтверждение кода.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Аутентификация
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                code:
+                  type: string
+                  description: ''
+                  example: nihil
+              required:
+                - code
+      security: []
+  /api/v1/auth/password-change:
+    post:
+      summary: 'Смена пароля.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Аутентификация
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                old_password:
+                  type: string
+                  description: ''
+                  example: velit
+                password:
+                  type: string
+                  description: ''
+                  example: quo
+              required:
+                - old_password
+                - password
+      security: []
+  /api/v1/auth/role:
+    post:
+      summary: 'Выбор роли - заказчик/курьер.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Аутентификация
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                role:
+                  type: string
+                  description: ''
+                  example: et
+              required:
+                - role
+      security: []
+  /api/v1/auth/logout:
+    post:
+      summary: Выход.
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Аутентификация
+      security: []
+  /api/v1/auth/register:
+    post:
+      summary: Регистрация.
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Аутентификация
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: rachelle.kunze@example.net
+                phone:
+                  type: string
+                  description: 'Must be at least 11 characters. Must not be greater than 11 characters.'
+                  example: juhtyk
+                password:
+                  type: string
+                  description: ''
+                  example: minus
+              required:
+                - email
+                - phone
+                - password
+      security: []
+  /api/v1/auth/login:
+    post:
+      summary: Логин.
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Аутентификация
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: xsporer@example.org
+                password:
+                  type: string
+                  description: ''
+                  example: suscipit
+              required:
+                - email
+                - password
+      security: []
+  /api/v1/auth/forgot:
+    post:
+      summary: 'Напоминание пароля.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Аутентификация
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: yhayes@example.net
+              required:
+                - email
+      security: []
+  /api/v1/auth/reset:
+    post:
+      summary: 'Сброс пароля.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Аутентификация
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: zmurray@example.org
+                token:
+                  type: string
+                  description: ''
+                  example: sit
+                password:
+                  type: string
+                  description: ''
+                  example: nam
+              required:
+                - email
+                - token
+                - password
+      security: []
+  /api/v1/customer:
+    get:
+      summary: 'Стартовый экран заказчика'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Заказчик
+      security: []
+  /api/v1/customer/settings:
+    post:
+      summary: 'Заполнение информации о заказчике.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Заказчик
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: quis
+                last_name:
+                  type: string
+                  description: ''
+                  example: iste
+                middle_name:
+                  type: string
+                  description: ''
+                  example: iste
+                region:
+                  type: string
+                  description: ''
+                  example: occaecati
+                city:
+                  type: string
+                  description: ''
+                  example: quo
+                street:
+                  type: string
+                  description: ''
+                  example: iure
+                house:
+                  type: string
+                  description: ''
+                  example: perferendis
+                flat:
+                  type: string
+                  description: ''
+                  example: maiores
+              required:
+                - name
+                - last_name
+                - middle_name
+                - region
+                - city
+                - street
+                - house
+                - flat
+      security: []
+  '/api/v1/customer/settings/{id}':
+    get:
+      summary: 'Информация о заказчике.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Заказчик
+      security: []
+    put:
+      summary: 'Обновление информации о заказчике.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Заказчик
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: vel
+                last_name:
+                  type: string
+                  description: ''
+                  example: sit
+                middle_name:
+                  type: string
+                  description: ''
+                  example: voluptatem
+                region:
+                  type: string
+                  description: ''
+                  example: et
+                city:
+                  type: string
+                  description: ''
+                  example: vero
+                street:
+                  type: string
+                  description: ''
+                  example: impedit
+                house:
+                  type: string
+                  description: ''
+                  example: quod
+                flat:
+                  type: string
+                  description: ''
+                  example: odio
+              required:
+                - name
+                - last_name
+                - middle_name
+                - region
+                - city
+                - street
+                - house
+                - flat
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the setting.'
+        example: 6
+        required: true
+        schema:
+          type: integer
+  /api/v1/customer/products:
+    get:
+      summary: 'Список товаров с фильтром по категориям.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Заказчик
+      security: []
+  '/api/v1/customer/products/{id}':
+    get:
+      summary: 'Информация о товаре.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Заказчик
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the product.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/v1/customer/partners:
+    get:
+      summary: 'Список контрагентов.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Заказчик
+      security: []
+    post:
+      summary: 'Создание нового контрагента.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Заказчик
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: et
+                last_name:
+                  type: string
+                  description: ''
+                  example: omnis
+                middle_name:
+                  type: string
+                  description: ''
+                  example: commodi
+                email:
+                  type: string
+                  description: ''
+                  example: null
+                phone:
+                  type: string
+                  description: ''
+                  example: consequatur
+                region:
+                  type: string
+                  description: ''
+                  example: quisquam
+                city:
+                  type: string
+                  description: ''
+                  example: unde
+                street:
+                  type: string
+                  description: ''
+                  example: rerum
+                house:
+                  type: string
+                  description: ''
+                  example: et
+                flat:
+                  type: string
+                  description: ''
+                  example: deleniti
+                entrance:
+                  type: string
+                  description: ''
+                  example: null
+                intercom:
+                  type: string
+                  description: ''
+                  example: null
+              required:
+                - name
+                - last_name
+                - middle_name
+                - phone
+                - region
+                - city
+                - street
+                - house
+                - flat
+      security: []
+  '/api/v1/customer/partners/{id}':
+    get:
+      summary: 'Информация о контрагенте.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Заказчик
+      security: []
+    put:
+      summary: 'Обновление информации о контрагенте.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Заказчик
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: doloremque
+                last_name:
+                  type: string
+                  description: ''
+                  example: sint
+                middle_name:
+                  type: string
+                  description: ''
+                  example: impedit
+                email:
+                  type: string
+                  description: ''
+                  example: null
+                phone:
+                  type: string
+                  description: ''
+                  example: tempore
+                region:
+                  type: string
+                  description: ''
+                  example: aperiam
+                city:
+                  type: string
+                  description: ''
+                  example: quaerat
+                street:
+                  type: string
+                  description: ''
+                  example: nesciunt
+                house:
+                  type: string
+                  description: ''
+                  example: dolore
+                flat:
+                  type: string
+                  description: ''
+                  example: quas
+                entrance:
+                  type: string
+                  description: ''
+                  example: null
+                intercom:
+                  type: string
+                  description: ''
+                  example: null
+              required:
+                - name
+                - last_name
+                - middle_name
+                - phone
+                - region
+                - city
+                - street
+                - house
+                - flat
+      security: []
+    delete:
+      summary: 'Удаление контрагента.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Заказчик
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the partner.'
+        example: 6
+        required: true
+        schema:
+          type: integer
+  /api/v1/customer/orders:
+    get:
+      summary: 'Список заказов с фильтром.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Заказчик
+      security: []
+    post:
+      summary: 'Создание заказа.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Заказчик
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                product_id:
+                  type: string
+                  description: ''
+                  example: tempora
+                rate_id:
+                  type: string
+                  description: ''
+                  example: sunt
+                desired_pick_up_date:
+                  type: string
+                  description: ''
+                  example: totam
+                desired_delivery_date:
+                  type: string
+                  description: ''
+                  example: quaerat
+                text:
+                  type: string
+                  description: ''
+                  example: null
+                sender_id:
+                  type: string
+                  description: ''
+                  example: id
+                sender_type:
+                  type: string
+                  description: ''
+                  example: eum
+                receiver_id:
+                  type: string
+                  description: ''
+                  example: cum
+                receiver_type:
+                  type: string
+                  description: ''
+                  example: dolorem
+                door_to_door:
+                  type: string
+                  description: ''
+                  example: null
+              required:
+                - product_id
+                - rate_id
+                - desired_pick_up_date
+                - desired_delivery_date
+                - sender_id
+                - sender_type
+                - receiver_id
+                - receiver_type
+      security: []
+  '/api/v1/customer/orders/{id}':
+    get:
+      summary: 'Информация о заказе.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Заказчик
+      security: []
+    put:
+      summary: 'Обновление информации о заказе.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Заказчик
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                desired_pick_up_date:
+                  type: string
+                  description: ''
+                  example: commodi
+                desired_delivery_date:
+                  type: string
+                  description: ''
+                  example: praesentium
+                sender_id:
+                  type: string
+                  description: ''
+                  example: odit
+                sender_type:
+                  type: string
+                  description: ''
+                  example: soluta
+                receiver_id:
+                  type: string
+                  description: ''
+                  example: et
+                receiver_type:
+                  type: string
+                  description: ''
+                  example: et
+                text:
+                  type: string
+                  description: ''
+                  example: null
+              required:
+                - desired_pick_up_date
+                - desired_delivery_date
+                - sender_id
+                - sender_type
+                - receiver_id
+                - receiver_type
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the order.'
+        example: 10
+        required: true
+        schema:
+          type: integer
+  '/api/v1/customer/orders/{order_id}/tips':
+    put:
+      summary: Чаевые.
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Заказчик
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                amount:
+                  type: string
+                  description: ''
+                  example: facilis
+              required:
+                - amount
+      security: []
+    parameters:
+      -
+        in: path
+        name: order_id
+        description: 'The ID of the order.'
+        example: 20
+        required: true
+        schema:
+          type: integer
+  /api/v1/customer/recharge-balance:
+    post:
+      summary: 'Пополнение баланса.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Заказчик
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                amount:
+                  type: string
+                  description: ''
+                  example: autem
+              required:
+                - amount
+      security: []
+  '/api/v1/customer/orders/{order_id}/rate':
+    post:
+      summary: 'Оценка доставки.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Заказчик
+      security: []
+    parameters:
+      -
+        in: path
+        name: order_id
+        description: 'The ID of the order.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/v1/customer/orders/{order_id}/cancel':
+    post:
+      summary: 'Отмена заказа.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Заказчик
+      security: []
+    parameters:
+      -
+        in: path
+        name: order_id
+        description: 'The ID of the order.'
+        example: 20
+        required: true
+        schema:
+          type: integer
+  /api/v1/courier:
+    get:
+      summary: 'Главный экран курьера.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Курьер
+      security: []
+  /api/v1/courier/settings:
+    post:
+      summary: 'Создание личных данных курьера.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Курьер
+      security: []
+  '/api/v1/courier/settings/{id}':
+    get:
+      summary: 'Информация о курьере.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Курьер
+      security: []
+    put:
+      summary: 'Обновление информации о курьере.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Курьер
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: iusto
+                last_name:
+                  type: string
+                  description: ''
+                  example: corrupti
+                middle_name:
+                  type: string
+                  description: ''
+                  example: cupiditate
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: magali.kessler@example.com
+                phone:
+                  type: string
+                  description: ''
+                  example: alias
+                active:
+                  type: string
+                  description: ''
+                  example: null
+                passport_series:
+                  type: string
+                  description: ''
+                  example: eos
+                passport_number:
+                  type: string
+                  description: ''
+                  example: repellendus
+                passport_issued_date:
+                  type: string
+                  description: ''
+                  example: nisi
+                passport_issued_by:
+                  type: string
+                  description: ''
+                  example: distinctio
+              required:
+                - name
+                - last_name
+                - middle_name
+                - email
+                - phone
+                - passport_series
+                - passport_number
+                - passport_issued_date
+                - passport_issued_by
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the setting.'
+        example: 3
+        required: true
+        schema:
+          type: integer
+  /api/v1/courier/ratings:
+    get:
+      summary: 'Список курьеров с рейтингом.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Курьер
+      security: []
+  /api/v1/courier/orders:
+    get:
+      summary: 'Список и фильтрация заказов.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Курьер
+      security: []
+  '/api/v1/courier/orders/{order_id}':
+    get:
+      summary: 'Информация о заказе.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Курьер
+      security: []
+    parameters:
+      -
+        in: path
+        name: order_id
+        description: 'The ID of the order.'
+        example: 12
+        required: true
+        schema:
+          type: integer
+  '/api/v1/courier/orders/{order_id}/start':
+    put:
+      summary: 'Заказ принят к исполнению.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Курьер
+      security: []
+    parameters:
+      -
+        in: path
+        name: order_id
+        description: 'The ID of the order.'
+        example: 11
+        required: true
+        schema:
+          type: integer
+  '/api/v1/courier/orders/{order_id}/stop':
+    put:
+      summary: 'Заказ выполнен.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Курьер
+      security: []
+    parameters:
+      -
+        in: path
+        name: order_id
+        description: 'The ID of the order.'
+        example: 13
+        required: true
+        schema:
+          type: integer
+  /api/v1/conversations:
+    get:
+      summary: 'Список чатов.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Чат
+      security: []
+    post:
+      summary: 'Создание чата.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Чат
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                recipient_id:
+                  type: string
+                  description: ''
+                  example: asperiores
+              required:
+                - recipient_id
+      security: []
+  '/api/v1/conversations/{id}':
+    get:
+      summary: Чат.
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Чат
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the conversation.'
+        example: 3
+        required: true
+        schema:
+          type: integer
+  /api/v1/conversations/support:
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Чат
+      security: []
+  '/api/v1/conversations/{conversation_id}/send':
+    post:
+      summary: 'Отправка сообщения.'
+      operationId: ''
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Чат
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  description: ''
+                  example: consequatur
+              required:
+                - message
+      security: []
+    parameters:
+      -
+        in: path
+        name: conversation_id
+        description: 'The ID of the conversation.'
+        example: 12
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: Endpoints
+    description: ''
+  -
+    name: Админ
+    description: ''
+  -
+    name: Аутентификация
+    description: ''
+  -
+    name: Заказчик
+    description: ''
+  -
+    name: Курьер
+    description: ''
+  -
+    name: Чат
+    description: ''
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: ''
+security:
+  -
+    default: []
