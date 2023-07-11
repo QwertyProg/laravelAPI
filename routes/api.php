@@ -15,11 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->group(function () {
 
-    Route::post('auth/confirm', \App\Http\Controllers\Api\V1\Auth\ConfirmController::class);
-
     Route::post('auth/password-change', \App\Http\Controllers\Api\V1\Auth\PasswordChangeController::class);
 
     Route::middleware(\App\Http\Middleware\ActiveUser::class)->group(function () {
+		Route::post('auth/confirm', \App\Http\Controllers\Api\V1\Auth\ConfirmController::class);
 
         Route::post('auth/role', \App\Http\Controllers\Api\V1\Auth\RoleController::class);
 
